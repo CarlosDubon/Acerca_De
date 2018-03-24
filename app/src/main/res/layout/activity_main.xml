@@ -58,6 +58,15 @@
                     android:layout_marginBottom="16dp"
                     android:drawablePadding="4dp"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_phone"
+                    android:drawableLeft="@drawable/ic_icons8_whatsapp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:textColor="@color/textDark"
+                    android:drawablePadding="4dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -77,11 +86,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/text_phone"
-                    android:drawableLeft="@drawable/ic_icons8_whatsapp"
+                    android:text="carlosminerodubon@gmail.com"
+                    android:drawableLeft="@drawable/ic_icons8_google"
                     android:drawableTint="@color/colorPrimaryDark"
-                    android:textColor="@color/textDark"
                     android:drawablePadding="4dp"
+                    android:textColor="@color/textDark"
                     />
             </LinearLayout>
         </LinearLayout>
