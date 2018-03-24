@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Acerca de</string>
+    <string name="text_name">Carlos Antonio Minero Dubon</string>
+    <string name="text_work">Ing. Informática</string>
+    <string name="text_git">CarlosDubon</string>
+    <string name="text_email">00058016@uca.edu.sv</string>
+    <string name="text_phone">7437-7681</string>
+</resources>
