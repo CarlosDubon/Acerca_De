@@ -20,9 +20,9 @@ import java.io.FileOutputStream;
 
 public class MainActivity extends AppCompatActivity {
     static int CODE_FOR_RESULT=981;
-    public TextView git,uca,gmail,wa;
+    public TextView git,uca,gmail,wa,name,esp;
     public ImageButton share;
-    public LinearLayout idForSaveView;
+    public ImageView idForSaveView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
         git = findViewById(R.id.git);
         wa = findViewById(R.id.wa);
         uca = findViewById(R.id.uca);
+        gmail = findViewById(R.id.gmail);
         share = findViewById(R.id.Share);
+        name = findViewById(R.id.name);
+        esp = findViewById(R.id.esp);
         idForSaveView = findViewById(R.id.saveView);
 
     }
@@ -47,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
             file.setReadable(true,false);
             final Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+            intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file))
+                    .putExtra(Intent.EXTRA_TEXT,name.getText().toString()+"\n"+esp.getText().toString()+"\n GitHub: "+git.getText().toString()+"\n WhatsApp: "+wa.getText().toString()+"\n Institucional: "+uca.getText().toString()+"\n Gmail: "+gmail.getText().toString());
             intent.setType("image/png");
             startActivityForResult(Intent.createChooser(intent, "Share image via"),CODE_FOR_RESULT);
         }catch (Exception e){
